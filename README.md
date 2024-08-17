@@ -219,7 +219,7 @@ ax[1].set_xticklabels(ax[0].get_xticklabels(),rotation=45,ha='right')
 plt.tight_layout()
 plt.show()
 ```
-### Result
+### Result of the code
 ![Visualization of the Shipping mode and costs and how they relate to overall sales](images/ShippingMode&Costs.png)
 *Two-sided Bar graph visualizing the Shipping mode and costs and how they relate to overall sales.*
 

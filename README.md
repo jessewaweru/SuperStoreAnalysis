@@ -1,24 +1,25 @@
 # Introduction
-The dataet I used is the Superstore data I gathered from Kaggle that was published by [Laiba Anwer](https://www.kaggle.com/datasets/aditisaxena20/superstore-sales-dataset) over two years ago. It is robust and has over 51,000 rows and 21 columns
+The dataset I used is the Superstore data I obtained from Kaggle that was published by [Laiba Anwer](https://www.kaggle.com/datasets/aditisaxena20/superstore-sales-dataset) over two years ago. It is robust and has over 51,000 rows and 21 columns
 # Background
-I wanted to investigate and identify what are some of the factors that contirbute to the performance of a superstore, the key metrics to look out for and what areas can the store focus on as it relates to marketing and logistic strategies.
+I wanted to investigate and identify the factors that contribute to the performance of a superstore, the key metrics to look out for, and the areas where the store can focus on related to marketing and logistics strategies.
 
 # Tools I used
 
 The tools I used to generate my insights for the project include the following:
 - **Python**
-- **Visual Studio Code**: My ideal code editor for Python and also SQL.
+- **Visual Studio Code**: My ideal code editor for Python and SQL.
 - **Git and GitHub:** Needed a version control to showcase the steps and changes  made as I progressed with my analysis. It's also ideal for sharing and collaboration purposes.
 
 # The Analysis
 ## 1.  What is the estimated lifetime value of customers in different segments?
 
-I wanted to figure out which markets were the most value of the long-term and specifically which customer segments in each market was the most valuable for the business using the lifetime value for every customer segment and for every market.
+Wanted to figure out the most valuable markets and customer segments for long-term growth by analyzing the lifetime value of each customer segment in every market.
 
 View my notebook showcasing the steps I took:
 [CLV_per_Segment](1_CLV_per_segment.ipynb)
 
 ## This is the code snippet I used to create my visualization:
+
 ```python
 l_markets=len(df['market'].unique())
 
@@ -60,11 +61,11 @@ plt.show()
 ![Visualization of the Total Customer lifetime value for each market](images/CLV_2.png)
 *Bar graph visualizing the Customer lifetime value for each segment in each market.*
 ### Insights
-- What stood out is how valuable the APAC market reaching over 5 million dollars in C.L.V showcasing just how valuable the countries in those regions are to the overall bottom line for the company.
-- The store also needs to put in more focus in generating more revenue in Canada, EMEA and Africa.
+- The APAC market, with a customer lifetime value (CLV) exceeding $5 million, demonstrated its significant contribution to the company's bottom line.
+- The store should prioritize increasing revenue in Canada, EMEA, and Africa.
 
-## 2.  Which product categories are driving the most revenue and how do sales figures compare across different product categories?
-There aret three main customr segments for the company. I wanted to find out how each customer segment was performing in relation to total sales and whether the growth trend for each market was positive.
+## 2.  Which product categories are driving the most revenue and how do sale figures compare across various product categories?
+The company has three primary customer segments. To assess their performance, I aimed to analyze each segment's contribution to total sales and identify any positive growth trends.
 
 View my notebook showcasing the steps I took:
 [MarketSales_by_Segments.](2_MarketSalesSegments.ipynb)
@@ -96,10 +97,10 @@ plt.show()
 *Bar graph visualizing of the Customer segment sales for each market.*
 
 ### Insights
-- From the graphs, you can notice that there is a psoitive sales growth trend from 2011 to 2014 for all markets and for all the markets, the consumer segment is the main driver of that growth in every year. 
+- The graphs illustrate a consistent positive sales growth trend for all markets from 2011 to 2014, with the consumer segment being the primary driver of this growth in each year.
 
-## 3.  How effective are different discount levels in driving sales and Is there a noticeable pattern in sales increase relative to the discount amount?
-Considering how frequent the store offers discounts to many of its customers, I wanted to find out which discount levels are driving the most sales and if there is a noticeable pattern or trend
+## 3.  How effective are different discount levels in driving sales and is there a noticeable pattern in sales increase relative to the discount amount?
+Given the store's frequent discounts, I sought to determine which discount levels are most effective in driving sales and whether any discernible patterns or trends exist.
 
 View my notebook showcasing the steps I took:
 [3_DiscountEffectiveness](3_DiscountEffectiveness.ipynb)
@@ -130,12 +131,12 @@ plt.show()
 *Scatterplot visualizing the different Pearson correlation coefficients for different discount levels.*
 
 ### Insights
-- The boxplot shows just how much the sales vary for different discount levels. The first level i.e. 0 to 10% discount has the most outliers of any of the groups with sales reaching 18,000 dollars for a customer but the further down you the less the outliers are.
-- I decided to use a pearson correlation matrix to see if there is a direct linear relationship between different discount levels and sales. For the most part the matrix shows that the relationship either positive or negative is very weak i.e. not even close to reaching 0 or 1. 
-- However, it's important to note that the only negative coefficient generated was for the 40 to 50% discount. This is a signal for the store to further investigate the performance of that discount level to figure if ther emight be other factors contributing to the level of sales having a negative relationship or if possible scrap out the discount altogether.
+- The boxplot reveals significant sales variability across different discount levels. The 0-10% discount group has the most outliers, with sales reaching $18,000 for some customers. However, the frequency of outliers decreases with higher discount levels.
+- A Pearson correlation matrix was used to assess any direct linear relationship between discount levels and sales. The analysis generally indicated a weak, if any, positive or negative correlation, as most coefficients were far from 0 or 1. 
+- Notably, the only negative coefficient was observed for the 40-50% discount. This suggests that the store should delve deeper into the performance of this discount level to identify potential contributing factors to the negative correlation or consider discontinuing it altogether.
 
 ## 4.  What is the Average order value from the top 10 overall buyers and also markets?
-I wanted to find out the top 10 highest purchasing customers for the store by indentifying their average order value. I did the same for the markets but I also compared it against the revenue from the product categories in each market.
+Wanted to find out the top 10 highest purchasing customers for the store by indentifying their average order value. I did the same for the markets but I also compared it against the revenue from the product categories in each market.
 
 View my notebook showcasing the steps I took:
 [AverageOrderValue](4_AverageOrderValue.ipynb)
@@ -186,7 +187,7 @@ plt.show()
 
 ## 5.  
 ### 5.1 How does shipping cost and shipping mode affect Sales ?
-A big part of the store's business involves shipping goods worldwide so I wanted to figure out how the shipping costs and shipping modes they used affected their sales across the world.
+A significant portion of the store's business relies on global shipping. To understand the impact of shipping costs and modes on worldwide sales, I aimed to analyze their correlation.
 
 View my notebook showcasing the steps I took:
 [Shipping&GrowthRate](5_Shipping&GrowthRate.ipynb)
@@ -224,11 +225,11 @@ plt.show()
 *Two-sided Bar graph visualizing the Shipping mode and costs and how they relate to overall sales.*
 
 ### Insights
-- The shipping costs for all four shipping modes stary relatively the same from 2011 to 2014 with the highest costs belonging to the first class and the lowest to the standard class.
-- The biggest takeaway, however, is that the highest overall sales are linked to the standard class compared to the rest, indicating that many of the store's customers prefer to wait and use the more pocket-friendly shipping mode.
+- Shipping costs for all four modes remained relatively consistent from 2011 to 2014, with first-class shipping being the most expensive and standard shipping the least
+- A key finding is that standard shipping, despite being the least expensive, is associated with the highest overall sales, suggesting that many customers are willing to wait for the more affordable option.
 
 ### 5.2.  Which markets show promise in relation of order growth rate ? 
-I also wanted to identify the rate of growth of orders by filtering out the data on a year-by-year basis and identifying which markets showed the highest overall growth of total orders.
+Wanted to identify the rate of growth of orders by filtering out the data on a year-by-year basis and identifying which markets showed the highest overall growth of total orders.
 
 View my notebook showcasing the steps I took:
 [Shipping&GrowthRate](5_Shipping&GrowthRate.ipynb)
@@ -262,7 +263,7 @@ plt.show
 *Two-sided Bar graph visualizing the growth rate of orders by market.*
 
 ### Insights
-- What stands out when looking at the two graphs is that the market, EMEA , shows the most promise of any of the markets. It had a a steady growth rate of orders and the highest overall growth of orders followed closely by the EU. This data could prove crucial for the store to help center its marketing initiatives more on EMEA to maximize order growth and generate even more revenue.
+- A comparative analysis of the two graphs highlights EMEA as the most promising market. It exhibited a consistent order growth rate and achieved the highest overall order growth, closely followed by the EU. This data suggests that focusing marketing initiatives on EMEA could be instrumental in maximizing order growth and generating increased revenue.
 
 ## 6.  Which markets generated the most profit per unit and what's the correlation between net profit and major performance metrics ? 
 
@@ -312,13 +313,13 @@ plt.show()
 *Three-sided Heatmap visualizing the correlation between net profit and other major performance metrics.*
 
 ### Insights
-- The APAC market was the best performing marketing in relation to profit per unit and the best product category in the market was technology reaching over 200,000 dollars in profit per unit.
-- Using the following metrics i.e. net  percentage,sales, profit, quantity and profit per unit, I decided to see if there is any correlation between them and fr further accuracy I used all three correlational coefficient matrices to figure out if there were any relationships that stood out. I identified two i.e. Quantity against sales and Quantity against profit per unit.
-- The first one had a positive correlation that was between 0.533975 to 0.757143 signalling a positive linear correlation meaning as quantity increases sales for the store also increases which makes sense.
-- The second one was intriguing. It showed a negative correlation i.e. from -0.323810 to -0.496104 showing an inverse association between the variables. Some possible reasons why this could be might include : increased purchases of bulk orders resulting in increaased shipping costs affecting the overall profit per unit, high bulk purchases of low profit margin products essentially contributing to high total sales but low profits overall, or higher quantities purchased might result in higher discounts offered affecting the overall bottom line of the store.
+- The APAC market demonstrated the highest profit per unit, with the technology product category achieving over $200,000 in profit per unit
+- To analyze potential correlations, I examined five metrics: net percentage, sales, profit, quantity, and profit per unit. Employing all three correlation coefficient matrices, I identified two significant relationships: between quantity and sales, and between quantity and profit per unit.
+- The first correlation, ranging from 0.533975 to 0.757143, indicated a positive linear relationship. This suggests that as the quantity of products sold increases, so do the store's sales, which is logical.
+- The second correlation, ranging from -0.323810 to -0.496104, revealed a negative relationship between quantity and profit per unit. Possible explanations for this include: increased shipping costs associated with bulk orders, purchases of low-profit-margin products in bulk, or higher discounts offered on larger quantities.
 
 # Conclusions
-This dataset was very interesting to evaluate. It showed an overall view of how super stores perform and the main takeaways I gathered from the data include:
+This dataset was very interesting to evaluate. It showed an overall view of how a Superstore performs and the main takeaways I gathered from the data include:
 
 - The store needs to start prioritizing the APAC, EMEA and EU markets as all three markets show promise for potential growth in bth orders and sales.
 - The store needs to invest in a more sustainable strategy to maximise on the future customers who prefer to ship their products using the Standard class as a large proportion of sales are attributed to that specific shipping mode.
